@@ -1,7 +1,6 @@
 // ------------------------------------------------------
 // app.js
-// Only one small job here: toggle the mobile nav menu
-// open and closed when the hamburger button is clicked.
+// Toggles the mobile nav menu
 // ------------------------------------------------------
 
 const menuBtn = document.getElementById("menuBtn");
