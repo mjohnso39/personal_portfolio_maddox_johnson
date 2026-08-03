@@ -1,0 +1,216 @@
+/* ==========================================
+   Basic setup
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222831;
+  background-color: #ffffff;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #2f6fed;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Nav bar
+   ========================================== */
+.site-header {
+  background-color: #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #f3f4f6;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ==========================================
+   Hero section
+   ========================================== */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background-color: #f5f7fb;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  color: #4b5563;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2f6fed;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #1e56c9;
+  text-decoration: none;
+}
+
+/* ==========================================
+   General sections
+   ========================================== */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  border-bottom: 3px solid #2f6fed;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* ==========================================
+   Project cards
+   ========================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+}
+
+.btn-small {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+/* ==========================================
+   Contact section
+   ========================================== */
+.contact-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+/* ==========================================
+   Responsiveness
+   These media queries adjust the layout for
+   smaller screens like tablets and phones.
+   ========================================== */
+
+/* Tablets */
+@media (max-width: 800px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Turn the nav links into a dropdown menu on small screens */
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1f2937;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
